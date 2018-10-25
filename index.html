@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <title>Large deformation modelling in geomechanics</title>
+      <link rel="stylesheet" href="css/reveal.css">
+      <link rel="stylesheet" href="css/theme/white.css">
+      <!-- Theme used for syntax highlighting of code -->
+      <link rel="stylesheet" href="lib/css/zenburn.css">
+      <!-- Printing and PDF exports -->
+      <script>
+         var link = document.createElement('link');
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+         document.getElementsByTagName('head')[0].appendChild(link);
+      </script>
+      <!-- MathJax -->
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <!-- Script for Video play back on Slide for multiple videos-->
+      <script
+         src = "js/video.js"></script>
+   </head>
+   <body>
+      <div class="reveal">
+         <div class="slides">
+            <!-- Section -->
+            <section>
+               <section>
+                  <h2>Large deformation modelling in geomechanics</h2>
+                  <h3>Material Point Method</h3>
+                  <p>
+                     <br/>Krishna Kumar, <a href="mailto:kks32@cam.ac.uk">kks32@cam.ac.uk</a>
+                     <br/>University of Cambridge / UT Austin (Jan 2019)
+                     <br/>
+                     <br/>Prof Ellen Rathje,
+                     <br/>University of Texas at Austin
+                  </p>
+                  <div style="float: left; width: 100%;">
+                     <span style="float: left; width: 33%; text-align: center;">
+                     <img style="border:0;" src="images/themes/cued.png" width="80%">
+                     </span>
+                     <span style="float: left; width: 33%; text-align: center;">
+                     <img style="border:0;" src="images/themes/cb-geo-text-white.png" width="55%">
+                     </span>
+                     <span style="float: right; width: 33%; text-align: center;">
+                     <img style="border:0;" src="images/themes/texas.png" width="70%">
+                     </span>
+                  </div>
+                  <div style="clear: both; width: 100%">
+                    <h4>25th October 2018</h4>
+                  </div>
+               </section>
+               <!-- Numerical methods -->
+               <section>
+                <h3>CB-Geo: Computational Geomechanics</h3>
+                <ul>
+                   <li> Material Point Method </li>
+                   <li> Lattice-Boltzmann + Discrete Element Method </li>
+                   <li> Finite Element Method - Thermo-Hydro Mechanical Coupling</li>
+                   <li> Lattice Element Method </li>
+                </ul>
+                <figure>
+                   <img style = "border:0;" src="images/themes/cb-geo.png" width ="100%">
+                   <figcaption><a href="http://www.cb-geo.com">View the CB-Geo website for
+                      more information and software tools</a>
+                   </figcaption>
+                </figure>
+               </section>
+            </section>
+            <!-- Material Point Method -->
+            <section>
+               <!-- Multiscale approach -->
+               <!-- Mesh based vs Mesh-free approach -->
+               <section>
+                  <h2>Mesh-based vs Mesh-free techniques</h2>
+                  <figure>
+                     <img style = "border:0;" src="images/continuum_approaches.png" width="100%">
+                  </figure>
+               </section>
+               <!-- Material Point Method -->
+               <section>
+                  <h2>Material Point Method</h2>
+                  <figure>
+                     <img style = "border:0;" src="images/mpm_soil.png" width="100%">
+                     <figcaption style = "font-size: 80%; text-align: center; ">
+                        Porosity in MPM
+                     </figcaption>
+                  </figure>
+               </section>
+               <!-- Material Point Method -->
+               <section>
+                  <h2>Material Point Method</h2>
+                  <div style="float: left; width: 30%;">
+                     <figure>
+                        <img style = "border:0;" src="images/mpm_equation.png" width="100%">
+                     </figure>
+                  </div>
+                  <div style="float: left; width: 70%;">
+                     <figure>
+                        <img style = "border:0;" src="images/mpm_algorithm.png" width="100%">
+                     </figure>
+                  </div>
+               </section>
+               <!-- Dam break -->
+               <section>
+                  <h2>MPM dam break</h2>
+                  <video  width="100%" autoplay controls loop>
+                     <source src="media/dam-break.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+               </section>
+               <!-- Granular column collapse -->
+               <section>
+                  <h2>Granular column collapse</h2>
+                  <img style = "border:0;" src="images/column_collapse.png" width="80%">
+               </section>
+               <!-- Material Point Method -->
+               <section>
+                  <h2>MPM column collapse</h2>
+                  <video  width="100%" autoplay controls loop>
+                     <source src="media/column-collapse.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+               </section>
+               <!-- MPM v DEM runout -->
+               <section>
+                  <h2>MPM v DEM column collapse</h2>
+                  <figure>
+                     <img style = "border:0;" src="images/mpm_colum_runout.png" width="80%">
+                     <figcaption>
+                        Runout v aspect ratio
+                     </figcaption>
+                  </figure>
+               </section>
+               <!-- DEM -->
+               <section>
+                  <h2>DEM column collapse</h2>
+                  <video  width="80%" autoplay controls loop>
+                     <source src="media/a6_dem.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+               </section>
+               <!-- MPM v DEM energy -->
+               <section>
+                  <h2>MPM v DEM column collapse</h2>
+                  <div style="float: left; width: 50%;">
+                     <figure>
+                        <img style = "border:0;" src="images/a04_energy.png" width="100%">
+                        <figcaption>
+                           a = 0.4
+                        </figcaption>
+                     </figure>
+                  </div>
+                  <div style="float: right; width: 50%;">
+                     <figure>
+                        <img style = "border:0;" src="images/a6_energy.png" width="100%">
+                        <figcaption>
+                           a = 6
+                        </figcaption>
+                     </figure>
+                  </div>
+                  <div style="clear: both;">
+                    <br/>
+                    Collisional dissipation mechanism is missing in the continuum approach.
+                  </div>
+               </section>
+               <!-- MPM slope -->
+               <section>
+                  <h2>MPM slope failure</h2>
+                  <video  width="100%" autoplay controls loop>
+                     <source src="media/mpm_100j.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Horizontal velocity (m/s)</p>
+               </section>
+               <!-- MPM v DEM runout -->
+               <section>
+                  <h2>MPM v DEM runout slope v collapse</h2>
+                  <figure>
+                     <img style = "border:0;" src="images/mpm_slope_column.png" width="90%">
+                  </figure>
+               </section>
+            </section>
+            <!-- Two phase MPM formulation -->
+            <section>
+               <section>
+                  <h2>MPM 2-phase formulation</h2>
+                  <img style = "border:0;" src="images/two-phase-mpm.jpg" width="60%">
+               </section>
+               <section>
+                  <h2>MPM slope failure: pore pressure changes</h2>
+                  <video  width="100%" autoplay controls loop>
+                     <source src="media/selborne.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Selborne case study of a 9 m high cut-slope slope (Soga et al., 2016)</p>
+               </section>
+               <section>
+                  <h2>MPM river levee failure: Bandara (2012)</h2>
+                  <video  width="60%" autoplay controls loop>
+                     <source src="media/mpm-river-levee.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Two-phase solution of a river levee failure (Bandara., 2012)</p>
+               </section>
+            </section>
+            <!-- Underwater landslides -->
+            <section>
+               <!-- Dissipation mechanism -->
+               <section>
+                  <h2>Possible boundary conditions of submarine run‐out</h2>
+                  <img style = "border:0;" src="images/landslide.png" width="80%">
+                  <ul>
+                     <li>Presence of ambient water (larger drag force & less gravity).</li>
+                     <li>Water entrainment.</li>
+                     <li>Pore pressure does not dissipate.</li>
+                  </ul>
+               </section>
+               <!-- Submarine landslide -->
+               <section>
+                  <h2>Submarine landslides</h2>
+                  <img style = "border:0;" src="images/submarine_landslide.png" width="70%">
+               </section>
+               <section>
+                  <h2>MPM submarine landslide</h2>
+                  <video  width="80%" autoplay controls loop>
+                     <source src="media/mpm-submarine-landslide.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Depth-averaged Material Point Method (Taka et al., 2012)</p>
+               </section>
+               <!-- Landslide mechanism -->
+               <section>
+                  <h2>Mechanism of submarine landslides</h2>
+                  <h3>Modelling Test at 1g Condition</h3>
+                  <img style = "border:0;" src="images/hydroplaning.png" width="100%">
+                  <ul>
+                     <li>Material type influences the mode of the flow.</li>
+                     <li>Target: Clay‐rich flow (Less diffusive, Hydroplaning).</li>
+                  </ul>
+               </section>
+               <!-- Mechanism of runout-->
+               <section>
+                  <h2>Mechanism of submarine runout</h2>
+                  <img style = "border:0;" src="images/water_entrainment.png" width="100%">
+               </section>
+               <!-- MPM Water entrainment -->
+               <section>
+                  <h2>MPM submarine landslide: Water entrainment</h2>
+                  <video  width="100%" autoplay controls loop>
+                     <source src="media/slope-water-entrainment.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Run-out for different water entrainment (Taka et al., 2012)</p>
+               </section>
+            </section>
+            <!-- Concrete flows -->
+            <section>
+              <section>
+                <h2>Concrete gravity flow</h2>
+                  <video  width="35%" autoplay controls loop>
+                     <source src="media/concrete-gravity-flow.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Wilkes et al (2018)</p>
+               </section>
+               <section>
+                  <h2>Concrete gravity flow with obstacle</h2>
+                  <video  width="40%" autoplay controls loop>
+                     <source src="media/concrete-gravity-flow-obstacle.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Wilkes et al (2018)</p>
+               </section>
+               <section>
+                  <h2>Slump cone MPM simulation</h2>
+                  <video  width="70%" autoplay controls loop>
+                     <source src="media/mpm-slump-cone.webm" type="video/webm">
+                     Your browser does not support the video tag.
+                  </video>
+                  <p>Wilkes et al (2018)</p>
+               </section>
+            </section>
+            <!-- Summary -->
+            <section>
+               <!-- Thank you! -->
+               <section  data-background="images/themes/cb-geo-banner.png" data-background-size="100%" data-background-opacity="50%">
+                  <br/>
+                  <h1><font color="yellow">Thank you!</font></h1>
+                  <br/><br/>
+                  <h2>
+                     <font color="white">
+                     Krishna Kumar
+                     </font>
+                  </h2>
+                  <h3>
+                     <font color="white">
+                     kks32@cam.ac.uk
+                     </font>
+                  </h3>
+               </section>
+            </section>
+            <!-- Special thanks to Chitra atthai! -->
+         </div>
+      </div>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
+         // More info https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+             history: true,
+             slideNumber: 'c/t',
+             // More info https://github.com/hakimel/reveal.js#dependencies
+             dependencies: [{
+                 src: 'plugin/markdown/marked.js'
+             }, {
+                 src: 'plugin/markdown/markdown.js'
+             }, {
+                 src: 'plugin/notes/notes.js',
+                 async: true
+             }, {
+                 src: 'plugin/highlight/highlight.js',
+                 async: true,
+                 callback: function() {
+                     hljs.initHighlightingOnLoad();
+                 }
+             }]
+         });
+      </script>
+   </body>
+</html>
