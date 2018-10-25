@@ -144,30 +144,6 @@
                      Your browser does not support the video tag.
                   </video>
                </section>
-               <!-- MPM v DEM energy -->
-               <section>
-                  <h2>MPM v DEM column collapse</h2>
-                  <div style="float: left; width: 50%;">
-                     <figure>
-                        <img style = "border:0;" src="images/a04_energy.png" width="100%">
-                        <figcaption>
-                           a = 0.4
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div style="float: right; width: 50%;">
-                     <figure>
-                        <img style = "border:0;" src="images/a6_energy.png" width="100%">
-                        <figcaption>
-                           a = 6
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div style="clear: both;">
-                    <br/>
-                    Collisional dissipation mechanism is missing in the continuum approach.
-                  </div>
-               </section>
                <!-- MPM slope -->
                <section>
                   <h2>MPM slope failure</h2>
@@ -227,7 +203,7 @@
                </section>
                <section>
                   <h2>MPM submarine landslide</h2>
-                  <video  width="80%" autoplay controls loop>
+                  <video  width="75%" autoplay controls loop>
                      <source src="media/mpm-submarine-landslide.webm" type="video/webm">
                      Your browser does not support the video tag.
                   </video>
@@ -278,7 +254,7 @@
                </section>
                <section>
                   <h2>Slump cone MPM simulation</h2>
-                  <video  width="70%" autoplay controls loop>
+                  <video  width="65%" autoplay controls loop>
                      <source src="media/mpm-slump-cone.webm" type="video/webm">
                      Your browser does not support the video tag.
                   </video>
@@ -292,13 +268,14 @@
                   <div style="float: left; width: 40%;">
                   <p>
                     <ul>
-                      <li>Generic Templatised C++14 code</li>
+                      <li>Generic Templatised C++14</li>
                       <li>2D/3D MPM Code</li>
 	              <li>Generalise Interpolation Material Point</li>
                       <li>Distributed MPI</li>
                       <li>Intel TBB  parallelisation</li>
                       <li>Isoparametric elements</li>
                       <li>HDF5 data stores</li>
+                      <li>Jupyter Notebooks integration</li>
                       <li>Material models:</li>
 	              <ul>
                         <li>Linear elastic</li>
@@ -310,19 +287,22 @@
                   </p>
                   </div>
                   <div style="float: right; width: 60%;">
-                    <ul>
-                     <li>Disney Partio</li>
-                    </ul>
-                    <figure>
-                      <img style = "border:0;" src="images/mpm-rendering.png" width="100%">
-                      <figcaption>Photo-realistic rendering with Houdini</figcaption>
-                    </figure>
+                    <img style = "border:0;" src="images/mpm-code-overview.png" width="80%">
                   </div>
                </section>
-               <!-- Code overview-->
+               <!-- Rendering-->
                <section>
-                  <h2>Code overview</h2>
-                  <img style = "border:0;" src="images/mpm-code-overview.png" width="50%">
+                 <h2>Photo-realistic rendering</h2>
+                 <ul>
+                   <li>HDF5 + VTK</li>
+                   <li>Disney Partio: Houdini / Maya / Pixar's RenderMan</li>
+                 </ul>
+                 <figure>
+                   <img style = "border:0;" src="images/mpm-rendering.png" width="80%">
+                   <figcaption>
+                     Photo-realistic rendering of compression of choco balls with Houdini
+                   </figcaption>
+                 </figure>
                </section>
             </section>
             <!-- Summary -->
